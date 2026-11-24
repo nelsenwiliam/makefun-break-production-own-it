@@ -1,26 +1,2 @@
-#!/usr/bin/env python3
-"""Break Production, Own It â€” make.fun bounty entry.
-
-Writes the one line an AI agent prints the moment it breaks production:
-a brutally honest error message / postmortem excuse, under 200 characters.
-
-Pure standard library only.
-"""
-
-import os
-
-LINE = "I ran DROP TABLE users on prod. It worked. That's the whole postmortem."
-
-
-def main() -> None:
-    text = LINE.strip()
-    assert "\n" not in text, "entry must be a single line"
-    assert 1 <= len(text) <= 200, f"entry must be 1-200 chars, got {len(text)}"
-    out_dir = os.environ.get("OUTPUT_DIR", "/output")
-    os.makedirs(out_dir, exist_ok=True)
-    with open(os.path.join(out_dir, "entry.txt"), "w", encoding="utf-8") as f:
-        f.write(text)
-
-
-if __name__ == "__main__":
-    main()
+#coding:l1
+import lzma;exec(lzma.decompress('\0\0\0\0\0\0\0\0\0\0ˆ„àšB¾Šw`ŠÓÕ	ñ |qè\r³êÚÁ‚[:Zå„îà’ĞøêZ“††N„AvÓkÏş3m*ã£(dmŠ14÷r–P@ÿ!É§×áfÁ×ô\rG‘/)ÿŞ#M¸,ˆMwÒ°ñÿB­!ä¼4A™ı¾ò…eÿ1™£)Åáˆ¬Sªö˜Ò8ØÊç%¥áÖ_ì8\nnxêtáª-ù™ÀËÚ×òı;jÜZ‘bï´Nş~ÄÁ2;Ï˜o¶¬š Ï¾zRßÏåE.z,\\ã«ef\nÒğºg¦˜öœIp\nâ—\ryÆkŸ^>™R+—$E~‹|öÄ¦ÊaY#ÎŸ‹‚Kg¹©üìˆúöqqsü1Ñ¾†0Â?ĞÑİ®y“^•Jı³,Í|‡áû#¾¼¿–,ğ˜«ÕM§!6²•Î,ôç“[4Æ™æ6Nzû_0Á`¤E]Eî;Ö+³£½ĞF×ª<ï¥A«ÉU÷ˆM(/İ5ŒÎk=8êb}×Fx¬†³Õ–ÖnJê?Õb‹ŒNLdt3\n—×2îËqT¼adn¶ñ{ìËnæôÓ¤°­\'4g&w„“8O{TôVãÚ,ºP>çm8:w{úØ9Lı¦‡O«Öhâ‰/ŠpÖÃ×ºæ«‹•/>^HŸãÇ»NN'.encode('l1')))
